@@ -22,6 +22,10 @@ const NavBar = () => {
     navigate("/*");
   };
 
+  const CadastrarProduto = async (event) => {
+    navigate("/cadastrarProdutos");
+  };
+
   useEffect(() => {
     if (window.location.pathname !== "/navBar/" + currentPage) {
       navigate("/navBar/" + currentPage);
@@ -75,7 +79,7 @@ const NavBar = () => {
             }}
           >
             <label className={Styles.textNameUser}>Manuel</label>
-            <MenuItem onClick={handleClose}>Cadastrar</MenuItem>
+            <MenuItem onClick={CadastrarProduto}>Cadastrar</MenuItem>
             <MenuItem onClick={Logout}>Sair</MenuItem>
           </Menu>
         </div>
@@ -83,7 +87,6 @@ const NavBar = () => {
       <div className={Styles.conteinerPagina}>
         <Outlet />
       </div>
-      
     </div>
   );
 };

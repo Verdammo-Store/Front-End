@@ -5,6 +5,7 @@ import CadastroUser from "../pages/cadastroUser";
 import NavBar from "../pages/navBar";
 import Home from "../pages/navBar/home";
 import Produtos from "../pages/navBar/produtos";
+import CadastroProdutos from "../pages/navBar/produtos/cadastrarProdutos";
 
 const Rotas = () => {
   return (
@@ -14,8 +15,12 @@ const Rotas = () => {
         <Route path="/cadastroUser" element={<CadastroUser />} />
         <Route path="/navBar" element={<NavBar />}>
           <Route path="/navBar/home" element={<Home />} />
-          <Route path="/navBar/produtos" element={<Produtos />} />
+          <Route path="/navBar/produtos" element={<Produtos />} />          
         </Route>
+        <Route
+            path="/cadastrarProdutos"
+            element={<CadastroProdutos />}
+          />
       </Routes>
     </Router>
   );

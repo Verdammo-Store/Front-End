@@ -35,8 +35,6 @@
 }
 
 .btnCompra {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--secondary) !important;
   border-radius: 50px;
-  padding: 10% !important;
-  font-size: 2.5rem !important;
 }
