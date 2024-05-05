@@ -28,8 +28,8 @@ export default function MediaCard({ imgSrc, title, description, price }) {
       </CardContent>
       <CardActions className={Styles.conteinerPreco}>
         <h2 className={Styles.textPreco}>{price}</h2>
-        <IconButton>
-          <AddShoppingCartIcon className={Styles.btnCompra} />
+        <IconButton className={Styles.btnCompra}>
+          <AddShoppingCartIcon />
         </IconButton>
       </CardActions>
     </Card>
