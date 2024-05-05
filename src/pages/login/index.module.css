@@ -1,0 +1,47 @@
+.conteiner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.contentLogin {
+  width: 40%;
+  height: 55%;
+  padding: 3%;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgLogo {
+  width: 65%;
+}
+
+.contentEmailSenha {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 6% !important;
+}
+
+.linkCadastro {
+  font-size: 1rem;
+  margin-top: 3%;
+  align-self: end;
+}
+
+.btnForm {
+  margin-top: 5% !important;
+  background-color: var(--tertiary) !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+}
