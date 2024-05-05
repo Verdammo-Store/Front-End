@@ -10,9 +10,15 @@ import {
   IconButton,
 } from "@mui/material";
 
-export default function MediaCard({ imgSrc, title, description, price }) {
+export default function MediaCard({
+  imgSrc,
+  title,
+  description,
+  price,
+  onCLick,
+}) {
   return (
-    <Card className={Styles.Card}>
+    <Card className={Styles.Card} onClick={onCLick}>
       <CardMedia className={Styles.conteinerImgCard}>
         <div className={Styles.contentImgCard}>
           <img src={imgSrc} className={Styles.img} />

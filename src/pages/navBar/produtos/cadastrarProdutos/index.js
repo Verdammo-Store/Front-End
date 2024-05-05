@@ -138,7 +138,6 @@ const CadastroProdutos = () => {
             color="tertiary"
             required
           />
-
           <Button type="submit" variant="contained" className={Styles.btnForm}>
             Cadastrar
           </Button>
