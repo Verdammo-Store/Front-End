@@ -1,0 +1,59 @@
+.conteiner {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.conteinerNavBar {
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  padding: 0 2% 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgLogo {
+  height: 80%;
+  cursor: pointer;
+}
+
+.contentLinks {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  color: var(--tertiary);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.item:nth-child(n + 3) {
+  font-size: 2rem;
+}
+
+.selected {
+  border-bottom: 2px solid var(--secondary);
+}
+
+.textNameUser {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 4% 0 4% 0;
+  color: var(--secondary);
+  font-size: 1.2rem;
+}
+
+.conteinerPagina {
+  flex: 1;
+  width: 100vw;
+  overflow-y: auto;
+}

@@ -13,7 +13,7 @@ const Login = () => {
   };
 
   const Autenticacao = () => {
-    navigate();
+    navigate("/navBar");
   };
 
   return (
@@ -44,7 +44,13 @@ const Login = () => {
               Cadastre-se
             </Link>
           </div>
-          <Button type="submit" variant="contained" className={Styles.btnForm}>
+          {/* depois trocar o type pra submit */}
+          <Button
+            type="button"
+            variant="contained"
+            className={Styles.btnForm}
+            onClick={Autenticacao}
+          >
             Entrar
           </Button>
         </form>
