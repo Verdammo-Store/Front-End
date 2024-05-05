@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const navigateCadastro = () => {
-    navigate();
+    navigate("/cadastroUser");
   };
 
   const Autenticacao = () => {
