@@ -1,0 +1,51 @@
+.modalBox {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+.contentImgInfo {
+  display: flex;
+}
+
+.contentImg {
+  width: 45%;
+  height: 26vh;
+  background-color: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.TextTitulo {
+  color: var(--tertiary);
+}
+
+.TextTitulo:nth-child(n + 2) {
+  margin-top: 5%;
+}
+
+.TextTituloDescrição {
+  color: var(--tertiary);
+  margin-top: 3%;
+}
+
+.textInfo {
+  font-size: 1rem;
+  margin-top: 2%;
+}
+
+.btnComprar {
+  width: 50% !important;
+  margin-top: 3% !important;
+  background-color: var(--tertiary) !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  align-self: center;
+}

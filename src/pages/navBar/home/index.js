@@ -8,17 +8,27 @@ import Card from "../../../components/cardItem";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Footer from "../../../components/footer";
+import ModalProduto from "../../../components/dialogProduto";
 
 const Home = () => {
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
+  const [open, setOpen] = React.useState(false);
+
   const itemsPerPage = 3;
 
   const VerTodosProdutos = () => {
     navigate("/produtos");
   };
 
-  // Array de produtos
+  const handleOpenModal = () => {
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
+
   const produtos = [
     {
       id: 1,
@@ -108,6 +118,7 @@ const Home = () => {
                   title={produto.title}
                   description={produto.description}
                   price={produto.price}
+                  onCLick={handleOpenModal}
                 />
               ))}
             <IconButton onClick={handleNext}>
@@ -119,6 +130,16 @@ const Home = () => {
       <div className={Styles.footer}>
         <Footer />
       </div>
+      <ModalProduto
+        open={open}
+        onClose={handleCloseModal}
+        imgSrc={Violao}
+        nomeProduto={"Violão"}
+        categoria={"cordas"}
+        estado={"novo"}
+        preco={"R$ 1.800,00"}
+        descricao={"teste"}
+      />
     </div>
   );
 };
