@@ -14,7 +14,7 @@ const InputSelect = ({
   const handleChange = (event) => {
     setOption(event.target.value);
     if (onChange) {
-      onChange(event.target.value);
+      onChange(event);
     }
   };
 

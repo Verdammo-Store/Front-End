@@ -6,6 +6,10 @@ import NavBar from "../pages/navBar";
 import Home from "../pages/navBar/home";
 import Produtos from "../pages/navBar/produtos";
 import CadastroProdutos from "../pages/navBar/produtos/cadastrarProdutos";
+import Instrumentos from "../pages/navBar/produtos/instrumentos";
+import Acessorio from "../pages/navBar/produtos/acessorios";
+import Cordas from "../pages/navBar/produtos/cordas";
+import Audio from "../pages/navBar/produtos/audio";
 
 const Rotas = () => {
   return (
@@ -15,7 +19,15 @@ const Rotas = () => {
         <Route path="/cadastroUser" element={<CadastroUser />} />
         <Route path="/navBar" element={<NavBar />}>
           <Route path="/navBar/home" element={<Home />} />
-          <Route path="/navBar/produtos" element={<Produtos />} />
+          <Route path="/navBar/produtos" element={<Produtos />}>
+            <Route
+              path="/navBar/produtos/instrumentos"
+              element={<Instrumentos />}
+            />
+            <Route path="/navBar/produtos/acessorios" element={<Acessorio />} />
+            <Route path="/navBar/produtos/cordas" element={<Cordas />} />
+            <Route path="/navBar/produtos/audio" element={<Audio />} />
+          </Route>
         </Route>
         <Route path="/cadastrarProdutos" element={<CadastroProdutos />} />
       </Routes>

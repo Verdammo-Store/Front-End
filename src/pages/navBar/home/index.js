@@ -119,6 +119,7 @@ const Home = () => {
                   description={produto.description}
                   price={produto.price}
                   onCLick={handleOpenModal}
+                  
                 />
               ))}
             <IconButton onClick={handleNext}>
