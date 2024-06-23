@@ -52,6 +52,10 @@
   justify-content: space-between;
 }
 
+.contentlistaProdutos > * {
+  margin-right: 20px;
+}
+
 .seta {
   font-size: 4rem !important;
   color: var(--secondary);

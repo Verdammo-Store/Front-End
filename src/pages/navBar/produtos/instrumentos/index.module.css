@@ -1,0 +1,37 @@
+.conteiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentTitulo {
+  height: 14vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.titulo {
+  font-size: 3rem !important;
+  color: var(--secondary);
+}
+
+.contentProdutos {
+  padding: 20px 0px 30px 30px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5%;
+}

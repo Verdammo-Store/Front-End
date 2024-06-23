@@ -1,6 +1,5 @@
 import * as React from "react";
 import Styles from "./index.module.css";
-import InputSenha from "../../../../components/InputSenha";
 import { TextField, Button, IconButton } from "@mui/material";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +11,13 @@ const listEstado = [
   { value: 2, label: "Usado" },
 ];
 
+const listCategoria = [
+  { value: 1, label: "Instrumentos" },
+  { value: 2, label: "Acessórios" },
+  { value: 3, label: "Cordas" },
+  { value: 4, label: "Áudio" },
+];
+
 const CadastroProdutos = () => {
   const navigate = useNavigate();
 
@@ -20,6 +26,7 @@ const CadastroProdutos = () => {
   const [deleteButtonVisible, setDeleteButtonVisible] = React.useState(false);
 
   const [estado, setEstado] = React.useState("");
+  const [categoria, setCategoria] = React.useState("");
 
   const CadastrarProdutos = () => {
     navigate();
@@ -29,8 +36,12 @@ const CadastroProdutos = () => {
     navigate("/navBar/home");
   };
 
-  const handleChange = (event) => {
+  const handleChangeEstado = (event) => {
     setEstado(event.target.value);
+  };
+
+  const handleChangeCategoria = (event) => {
+    setCategoria(event.target.value);
   };
 
   const handleFileSelect = () => {
@@ -108,12 +119,13 @@ const CadastroProdutos = () => {
             color="tertiary"
             required
           />
-          <TextField
-            className={Styles.input}
-            label="Categoria"
-            variant="outlined"
-            color="tertiary"
-            required
+          <InputSelect
+            nomeInputLabel="Categoria"
+            labelSelect="Categoria"
+            menuItens={listCategoria}
+            value={categoria}
+            onChange={handleChangeCategoria}
+            className={Styles.inputCategoria}
           />
           <div className={Styles.inputEstadoPreco}>
             <InputSelect
@@ -121,7 +133,7 @@ const CadastroProdutos = () => {
               labelSelect="Estado"
               menuItens={listEstado}
               value={estado}
-              onChange={handleChange}
+              onChange={handleChangeEstado}
               className={Styles.inputSelectEstado}
             />
             <TextField
